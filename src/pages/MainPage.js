@@ -6,7 +6,6 @@ import pepperSoupImage from '../assets/pepper-soup.jpg';
 import swallow from '../assets/swallow.png';
 import grills from '../assets/grills.jpg';
 import sweets from '../assets/sweets.jpg';
-import onboardingmobile from '../assets/onboarding-mobile.jpg'; 
 import egusi from '../assets/egusi.jpg'; 
 import mainPageImg from '../assets/mainpage-heroimg.jpg';
 import FoodDetailOverlay from '../components/FoodDetailOverlay';

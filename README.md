@@ -195,6 +195,7 @@ This project is licensed under the MIT License.
 Chuks Kitchen - hello@chukskitchen.com
 
 Project Link: [https://github.com/masha-a-m/chuks-kitchen](https://github.com/masha-a-m/chuks-kitchen)
+Deployment Link: [https://github.com/masha-a-m/chuks-kitchen](https://github.com/masha-a-m/chuks-kitchen)
 
 ## Acknowledgments
 
@@ -206,8 +207,3 @@ Project Link: [https://github.com/masha-a-m/chuks-kitchen](https://github.com/ma
 
 Made with ❤️ for Nigerian food lovers everywhere
 ```
-
-Copy and paste this entire content into your `README.md` file. Make sure to replace:
-- `yourusername` with your actual GitHub username
-- Add any specific deployment URLs when available
-- Update the contact email if needed
