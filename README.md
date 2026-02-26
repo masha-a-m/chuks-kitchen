@@ -195,7 +195,8 @@ This project is licensed under the MIT License.
 Chuks Kitchen - hello@chukskitchen.com
 
 Project Link: [https://github.com/masha-a-m/chuks-kitchen](https://github.com/masha-a-m/chuks-kitchen)
-Deployment Link: [https://github.com/masha-a-m/chuks-kitchen](https://github.com/masha-a-m/chuks-kitchen)
+
+Deployment Link: [https://chuks-kitchen-blond.vercel.app/](https://chuks-kitchen-blond.vercel.app/)
 
 ## Acknowledgments
 
