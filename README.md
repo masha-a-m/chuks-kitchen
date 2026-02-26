@@ -1,70 +1,213 @@
-# Getting Started with Create React App
+# Chuks Kitchen - Nigerian Food Delivery App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React-based food delivery application for authentic Nigerian cuisine. Users can browse delicious Nigerian dishes, customize their orders, and manage their cart seamlessly.
 
-## Available Scripts
+![Chuks Kitchen App]
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### User Authentication
+- Sign Up / Sign In pages with form validation
+- Password visibility toggle
+- Social login options (Google, Facebook)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Food Browsing
+- Popular food categories grid
+- Chef's specials section with detailed descriptions
+- Search functionality for finding dishes
+- New menu additions banner
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Food Customization
+- Click on any food item to open detailed view
+- Choose protein options (Fried Chicken, Grilled Fish, Beef)
+- Add optional sides (Plantain, Coleslaw, Pepper Sauce)
+- Special instructions textarea for dietary requirements
+- Real-time price calculation based on selections
 
-### `npm test`
+### Shopping Cart
+- Add items from main page or detailed view
+- View cart with all selected items and customizations
+- Adjust quantities with + / - buttons
+- Remove items individually
+- Persistent cart storage using localStorage
+- Real-time total price calculation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Responsive Design
+- Mobile-first approach
+- Hamburger menu for mobile devices
+- Optimized layouts for all screen sizes
+- Touch-friendly buttons and controls
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React.js - Frontend library
+- Tailwind CSS - Styling and responsive design
+- React Router - Navigation and routing
+- Context API - State management for cart
+- LocalStorage - Persist cart data
+- Vite - Build tool and development server
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+src/
+├── assets/              # Images and static assets
+├── components/          # Reusable components
+│   └── FoodDetailOverlay.jsx
+├── context/             # Context providers
+│   └── CartContext.jsx
+├── pages/               # Page components
+│   ├── Onboarding.jsx
+│   ├── SignIn.jsx
+│   ├── SignUp.jsx
+│   ├── MainPage.jsx
+│   └── CartPage.jsx
+├── App.jsx              # Main app with routing
+├── main.jsx             # Entry point
+└── index.css            # Global styles
+```
 
-### `npm run eject`
+## Installation and Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Local Development
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository
+   ```bash
+   git clone https://github.com/masha-a-m/chuks-kitchen.git
+   cd chuks-kitchen
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Install dependencies
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. Start the development server
+   ```bash
+   npm run dev
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Open your browser
+   ```
+   http://localhost:5173
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deployment Instructions
 
-### Code Splitting
+### Deploy on Netlify (Recommended)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Build the project
+   ```bash
+   npm run build
+   ```
+   This creates a `dist` folder with production files.
 
-### Analyzing the Bundle Size
+2. Deploy via Netlify CLI
+   ```bash
+   # Install Netlify CLI
+   npm install -g netlify-cli
+   
+   # Deploy
+   netlify deploy
+   
+   # For production deployment
+   netlify deploy --prod
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Or deploy via Netlify Dashboard
+   - Go to [Netlify](https://app.netlify.com)
+   - Click "New site from Git"
+   - Connect your GitHub repository
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+   - Click "Deploy site"
 
-### Making a Progressive Web App
+### Deploy on Vercel
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Install Vercel CLI
+   ```bash
+   npm install -g vercel
+   ```
 
-### Advanced Configuration
+2. Deploy
+   ```bash
+   vercel
+   ```
+   Follow the prompts to complete deployment.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. Or via Vercel Dashboard
+   - Go to [Vercel](https://vercel.com)
+   - Import your GitHub repository
+   - Framework preset: Vite
+   - Build command: `npm run build`
+   - Output directory: `dist`
+   - Click "Deploy"
 
-### Deployment
+### Deploy on GitHub Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Install gh-pages
+   ```bash
+   npm install --save-dev gh-pages
+   ```
 
-### `npm run build` fails to minify
+2. Update package.json
+   ```json
+   {
+     "homepage": "https://yourusername.github.io/chuks-kitchen",
+     "scripts": {
+       "predeploy": "npm run build",
+       "deploy": "gh-pages -d dist"
+     }
+   }
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. Deploy
+   ```bash
+   npm run deploy
+   ```
+
+## Environment Variables
+
+Create a `.env` file in the root directory:
+
+```env
+VITE_API_URL=your_api_url_here
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+Chuks Kitchen - hello@chukskitchen.com
+
+Project Link: [https://github.com/masha-a-m/chuks-kitchen](https://github.com/masha-a-m/chuks-kitchen)
+
+## Acknowledgments
+
+- Images from [Unsplash](https://unsplash.com)
+- Icons from Emoji Unicode
+- Nigerian culinary inspiration
+
+---
+
+Made with ❤️ for Nigerian food lovers everywhere
+```
+
+Copy and paste this entire content into your `README.md` file. Make sure to replace:
+- `yourusername` with your actual GitHub username
+- Add any specific deployment URLs when available
+- Update the contact email if needed
