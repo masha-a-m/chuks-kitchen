@@ -125,7 +125,7 @@ const handleQuickAdd = (item) => {
             
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex items-center space-x-48">
-              <Link to="/" className="text-orange-500 font-medium ml-16">Home</Link>
+              <Link to="/mainpage" className="text-orange-500 font-medium ml-16">Home</Link>
               <Link to="/explore" className="text-gray-700 hover:text-orange-500">Explore</Link>
               <Link to="/cart" className="text-gray-700 hover:text-orange-500">My Orders</Link>
               <Link to="/account" className="text-gray-700 hover:text-orange-500">Account</Link>
@@ -168,7 +168,7 @@ const handleQuickAdd = (item) => {
               {/* Menu Links */}
               <div className="p-4">
                 <Link 
-                  to="/" 
+                  to="/mainpage" 
                   className="block py-3 text-orange-500 font-medium border-b border-gray-100"
                   onClick={closeMenu}
                 >
@@ -182,7 +182,7 @@ const handleQuickAdd = (item) => {
                   Explore
                 </Link>
                 <Link 
-                  to="/my-orders" 
+                  to="/cart" 
                   className="block py-3 text-gray-700 hover:text-orange-500 border-b border-gray-100"
                   onClick={closeMenu}
                 >
